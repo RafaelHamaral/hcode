@@ -83,7 +83,7 @@ function exibe($cargos){
         //verifica se o index (chave subordinado) foi definida e se dentro de subordinado tem mais de 0 itens
         if (isset($cargo['subordinados']) && count($cargo['subordinados']) > 0) {
 
-            $html .= exibe($cargo['subordinados']);
+            $html .= exibe($cargo['subordinados']);//funcao recursiva  ou seja ela executara o codigo acima quantas vezes tiver o array de cargos
         }
 
         $html .= "</li>";
@@ -92,6 +92,8 @@ function exibe($cargos){
 
     $html .= "</ul>";
 
-    return $html;
+    return $html; // retorna pra tela
+
 }
-echo exibe($hierarquia);
+echo exibe($hierarquia); //essa é uma funcao recursiva
+

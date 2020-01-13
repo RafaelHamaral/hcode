@@ -5,7 +5,7 @@
 function soma(int ...$valores){//todos os parametros sera um array e serao passados N valores
 
 
-    return array_sum($valores);//funcao para soma dos valores
+    return array_sum($valores);//funcao para soma dos valores - retorna pra tela
 //minha funcao recebera N valores inteiros. 
 
 //antes function soma($a + $b) -- nao é mais necessario
