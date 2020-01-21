@@ -13,17 +13,18 @@ class Documento{
 
     public function setNumero($numero){
 
-       $resultado = Documento::validarCPF($numero);   //nome da classe :: acessar metodos estaticos
+       $resultado = Documento::validarCPF($numero);   //nome da classe :: acessar metodos estaticos/ neste caso coloca 
+       //o retorno (true ou false) dentro da variavel $resultado.
        
        if($resultado === false){
 
-        throw new Exception("CPF Informado não é valido",1);// se o cpf nao for valido mostrara essa mensagem
+        throw new Exception("CPF Informado não é valido",1);// se o cpf nao for valido vai estourar um erro e mostrara essa mensgaem
 
        }
        
        $this->numero = $numero;
 
-    }
+    } //neste caso ele valida se o cpf informado é valido 
 
 
     /*criando um metodo estatico - static (permite que tanto um atributo quanto um metodo
@@ -87,7 +88,7 @@ $cpf->setNumero("29404073040");
 var_dump($cpf->getNumero());
 */
 
-//usar sem instaciar a classe 
+//usar sem instaciar a classe - usando apenas o metodo estatico
 var_dump(Documento::validarCPF("29404073040")); //neste caso se for verdadeiro retorna true se nao falso.
 
 ?>
