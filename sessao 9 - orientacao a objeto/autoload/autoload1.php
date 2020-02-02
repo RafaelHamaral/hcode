@@ -12,6 +12,6 @@ function __autoload($nomeClasse){//metodo magico   $nomeClass = nome da classe q
 
 $carro = new DelRey();
 
-$carro->acelerar(80);
+$carro->acelerar(80); 
 
 ?>

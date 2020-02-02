@@ -8,9 +8,11 @@ private $nome;
 private $email;
 private $senha;
 
+///getters e setters
+
 public function getNome():string{
 
-    return $this->nome;
+    return $this->nome; //this referencia o atributo dentro do metodo
 
 }
 public function getEmail():string{
@@ -44,7 +46,7 @@ public function setSenha($senha){
 public function __toString(){
 
 
-    return json_encode(array(
+    return json_encode(array(//json_encode tem que ser de uma array
         "nome"=>$this->getNome(),
         "email"=>$this->getEmail(),
         "senha"=>$this->getSenha()

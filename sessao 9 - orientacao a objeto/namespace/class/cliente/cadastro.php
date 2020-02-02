@@ -2,7 +2,7 @@
 
 namespace cliente;
 
-class Cadastro extends \Cadastro{
+class Cadastro extends \Cadastro{//// \ -> volte na raiz   \Cadastro -> la na raiz encontre a classe cadastro
 
     public function registrarVenda(){
  
