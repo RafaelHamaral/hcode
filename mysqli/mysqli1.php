@@ -19,7 +19,7 @@ $stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES (?, 
 
 $stmt->bind_param("ss",$login, $pass);//metodo espera os tipos de dados das interrogações (abreviado, s string, i inteiro, b blob)
 //neste caso sao duas strings (ss) e dois valores ($login e $pass(os dois sao string))
-
+//os parametros precisam ser passados por referencia (abaixo)
 $login = "user";  
 $pass = "12345";
 

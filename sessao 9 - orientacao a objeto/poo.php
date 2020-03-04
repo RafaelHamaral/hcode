@@ -8,8 +8,9 @@ class Pessoa{ //nome da classe (por convençao sempre em letra maiuscula)
 
     public function falar(){ // metodo (funcao dentro de uma classe)
 
-        return "O meu nome é ".$this->nome;//this representa a classe ja instanciada ($nome(objeto))
-  
+        return "O meu nome é ".$this->nome;//this representa a classe ja instanciada ($nome(objeto)) referenciar atributos e metodos
+        ///dentro de outros metodos
+    
     }
 //public - tipo de recurso/quem podera ver (public todos tem acesso)
 }
