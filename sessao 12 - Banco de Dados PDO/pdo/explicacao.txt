@@ -1,0 +1,32 @@
+
+//PDO - PHP DATA OBJECT
+-> biblioteca (DRIVER) - o driver tem que ser habilitado no php.ini
+A utilização do PDO fornece uma camada de abstração em relação a conexão com o banco de dados visto que o PDO efetua a conexão com diversos bancos 
+de dados da mesma maneira, modificando apenas a sua string de conexão.  
+*palavra chave: conexao com o banco de dados.
+
+$conn = new PDO("mysql:host=localhost;dbname=dbphp7","root","root");//conexao com o banco mysql/a ordem nao importa, se usa-se o sql utilizaria
+da mesma forma de pdo2.php
+
+stmt significa comando
+
+:LOGIN e :PASSWORD sao identificadores de deslogin, dessenha (parametros) e nao o valor real do campo.
+
+STMT PREPARE ->  pode se enviar qualquer comando e nao apenas comandos basicos.
+O proprio mysql compila e ele mesmo executa o lot. 
+
+BINDPARAM -> unir os parametros   (bind = ligar)
+se o identificador tiver maiusculo tem que enviar maiusculo tbm
+
+$stmt->bindParam(":PASSWORD", $password);//ligue o identificador a variavel $password.
+
+$stmt->execute();//executando o comando. 
+
+
+
+//PREPARE E EXECUTE
+-> prepare como o nome ja diz prepara uma operacao no banco de dados, se faz necessario outros metodos como exemplo
+o EXECUTE para realmente executar a operação
+
+O PDO::FETCH_OBJ trata cada linha da consulta como um objeto, transformando os campos que foram retornados em atributos 
+do objeto. Acessamos estes atributos utilizando os caracteres -> (traço maior) e o nome do campo buscado.

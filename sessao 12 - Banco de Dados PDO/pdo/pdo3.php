@@ -12,7 +12,7 @@ $stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES(:LOG
 //stmt prepare pode se enviar qualquer comando e nao apenas comandos basicos.
 // O proprio mysql compila e ele mesmo executa o lot. 
 
-//criando os parametros e unindo aos identificadores criados acima:
+////criando os parametros e unindo aos identificadores criados acima:
 
 $login = "jose"; //passo o valor do parametro
 $password = "1234";
