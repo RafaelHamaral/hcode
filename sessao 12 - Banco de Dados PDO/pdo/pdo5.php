@@ -11,6 +11,6 @@ $id = 1; // dados do id que seram deletados
 
 $stmt->bindParam(":ID",$id); //ligo o identificador ID a variavel id.
 
-$stmt->execute();
+$stmt->execute(); 
 
-echo "dados deletados com sucesso"; 
+echo "dados deletados com sucesso";
