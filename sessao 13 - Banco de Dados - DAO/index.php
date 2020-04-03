@@ -13,11 +13,34 @@ echo json_encode($usuarios); //vai gerar todos os dados do banco em json*/
 
 require_once("config.php");
 
-$root = new Usuario();
+//carrega um usuário:
+/*$root = new Usuario();
+$root->loadById(6); //como eh um objeto vai gerar o __toString() e mostrar o json
+echo $root;*/
 
-$root->loadById(6);
+//////////////////////////////////////////////////////////////////////
 
-echo $root;
+//carrega uma lista de usuários:
+
+/*$lista = Usuario::getList();
+echo json_encode($lista);*/
+
+///////////////////////////////////////////////////////////////////////
+
+//carrega uma lista de usuarios buscando pelo login:
+
+/*$search = Usuario::search("jo");
+
+echo json_encode($search);*/
+
+////////////////////////////////////////////////////////////////////////
+
+//carrega um usuario usando o login e a senha:
+
+$usuario = new Usuario();
+$usuario->login("root","123");
+
+echo $usuario;
 
 
 ?>
